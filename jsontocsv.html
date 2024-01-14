@@ -69,6 +69,27 @@
         <a id="downloadLink" class="btn btn-success mt-3" style="display: none;" download="output.csv">Download CSV</a>
     </div>
 </div>
+<div class="container mt-4">
+    <p>To convert JSON to CSV, the JSON data should be in a specific format. The JSON data should either be an array of objects or a single object with specific key-value pairs. Here's a brief explanation of both formats:</p>
+    
+    <h4>Array of Objects:</h4>
+    <pre><code>[
+  {"name": "John", "age": 30, "city": "New York"},
+  {"name": "Alice", "age": 28, "city": "San Francisco"}
+]</code></pre>
+    <p>In this format, each object represents a row in the CSV file, with keys like "name", "age", and "city" representing the column headers.</p>
+    
+    <h4>Single Object:</h4>
+    <pre><code>{
+  "data": [
+    {"name": "John", "age": 30, "city": "New York"},
+    {"name": "Alice", "age": 28, "city": "San Francisco"}
+  ]
+}</code></pre>
+    <p>In this format, the "data" key contains an array of objects, similar to the first format.</p>
+    
+    <p>The script checks for these formats when converting JSON to CSV and processes the JSON data accordingly.</p>
+  </div>
 <footer style="margin-top: 5%;">
     <div style="text-align: center;">
         <p style="margin-bottom: 5px;">&copy; 2024 EasyDataCraft. All rights reserved.</p>
